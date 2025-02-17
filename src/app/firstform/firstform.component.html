@@ -1,0 +1,78 @@
+<h2>INTEREST/ADD INTEREST</h2>
+<div class="container mt-4">
+    <form [formGroup]="loanForm" (ngSubmit)="onSubmit()">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="interestCode">Interest Code</label>
+          <input type="text" id="interestCode" class="form-control" formControlName="interestCode" required>
+        </div>
+  
+        <div class="form-group col-md-6">
+          <label for="interestName">Interest Name</label>
+          <input type="text" id="interestName" class="form-control" formControlName="interestName" required>
+        </div>
+      </div>
+  
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="effectiveFrom">Effective From Date</label>
+          <input type="date" id="effectiveFrom" class="form-control" formControlName="effectiveFrom" required>
+        </div>
+    
+        <div class="form-group col-md-6">
+          <label for="effectiveTo">Effective To Date</label>
+          <input type="date" id="effectiveTo" class="form-control" formControlName="effectiveTo" required>
+        </div>
+      </div>
+  
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="penalInterest">Penal Interest</label>
+          <input type="text" id="penalInterest" class="form-control" formControlName="penalInterest" required>
+        </div>
+  
+        <div class="form-group col-md-6">
+          <label for="penalInterestType">Penal Interest Type</label>
+          <input type="text" id="penalInterestType" class="form-control" formControlName="penalInterestType" required>
+        </div>
+      </div>
+  
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="calculationMethod">Calculation Method</label><br>
+          <input type="radio" id="reducingBalance" name="calculationMethod" formControlName="calculationMethod" value="reducingBalance" required>
+          <label for="reducingBalance">Reducing Balance</label><br>
+          <input type="radio" id="flatRate" name="calculationMethod" formControlName="calculationMethod" value="flatRate" required>
+          <label for="flatRate">Flat Rate</label>
+        </div>
+  
+        <div class="form-group col-md-6">
+          <label for="interestPeriod">Interest Period</label><br>
+          <input type="radio" id="perMonth" name="interestPeriod" formControlName="interestPeriod" value="perMonth" required>
+          <label for="perMonth">Per Month</label><br>
+          <input type="radio" id="perAnnum" name="interestPeriod" formControlName="interestPeriod" value="perAnnum" required>
+          <label for="perAnnum">Per Annum</label>
+        </div>
+      </div>
+  
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="rateDerivation">Rate Derivation</label><br>
+          <input type="radio" id="constantRate" name="rateDerivation" formControlName="rateDerivation" value="constantRate" required>
+          <label for="constantRate">Constant Rate</label><br>
+          <input type="radio" id="slab" name="rateDerivation" formControlName="rateDerivation" value="slab" required>
+          <label for="slab">Slab</label>
+        </div>
+  
+        <div class="form-group col-md-6">
+          <label for="enterRate">Enter Rate</label>
+          <input type="number" id="enterRate" class="form-control" formControlName="enterRate" required>
+        </div>
+      </div>
+  
+      <div class="form-submit">
+        <button type="submit">Submit</button>
+    </div>
+    </form>
+  </div>
+  
